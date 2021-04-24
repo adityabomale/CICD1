@@ -3,4 +3,4 @@
   sudo: yes
   tasks:
   - name: creating folder
-    file: path=/home/ubuntu/folder1 state=directory
+    file: path=folder1 state=directory
