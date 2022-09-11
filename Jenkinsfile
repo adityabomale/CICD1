@@ -7,7 +7,7 @@ pipeline {
 	    stage ('docker container run') {
 		    steps {
 			    sh 'docker run hello-world'
-		    }
+		    }}
 		    
           }
 }
