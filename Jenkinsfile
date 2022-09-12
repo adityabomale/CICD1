@@ -17,8 +17,8 @@ pipeline {
 		    steps{ 
 			    sh 'mvn package'
 		    }
-	*/    }
-	    stage ('Docker build'){
+	    }
+	   */ stage ('Docker build'){
 		    steps {
 			   sh 'docker build -t sampleimage:latest .' 
 			    sh 'docker tag samplewebapp sampleimage:latest'
