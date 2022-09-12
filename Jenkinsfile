@@ -1,8 +1,9 @@
 pipeline {
     agent any  
-	tools {
+/*	tools {
 		maven "Maven"
 	}
+	*/
     stages {
 	stage ('build') {steps {echo 'inside build stage'}}
 	stage ('test') {steps {echo 'inside test stage'}}
@@ -12,11 +13,11 @@ pipeline {
 			    git branch: 'working', url: 'https://github.com/adityabomale/new-repo.git'
 		    }
 	    }
-	    stage ('maven build'){
+	/*    stage ('maven build'){
 		    steps{ 
 			    sh 'mvn package'
 		    }
-	    }
+	*/    }
 	    stage ('Docker build'){
 		    steps {
 			   sh 'docker build -t sampleimage:latest .' 
