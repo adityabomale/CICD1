@@ -21,12 +21,12 @@ pipeline {
 	   */ stage ('Docker build'){
 		    steps {
 			   sh 'docker build -t sampleimage:latest .' 
-			    sh 'docker tag samplewebapp sampleimage:latest'
+			    sh 'docker tag samplewebapp aditya/sampleimage:latest'
 		    }
 	    }
 	    stage ('run docker'){
 		    steps {
-			    sh "docker run -d -p 8090:8080 samplewebapp"
+			    sh "docker run -d -p 8090:8080 aditya/sampleimage"
 		    }
 	    }
 		    
