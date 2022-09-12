@@ -20,7 +20,7 @@ pipeline {
 	    }
 	  */  stage ('remove existing containers'){
 	    	steps{
-			sh 'docker container prune'
+			sh 'docker container prune -y'
 		}
 	  }
 	    
