@@ -21,7 +21,7 @@ pipeline {
 	   */ stage ('Docker build'){
 		    steps {
 			   sh 'docker build -t sampleimage:latest .' 
-			    sh 'docker tag samplewebapp aditya/sampleimage:latest'
+			    sh 'docker tag sampleimage aditya/sampleimage:latest'
 		    }
 	    }
 	    stage ('run docker'){
