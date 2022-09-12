@@ -29,6 +29,11 @@ pipeline {
 			    sh "docker run -d -p 8090:8080 aditya/sampleimage"
 		    }
 	    }
+	    stage ('run docker on remote server'){
+		    steps {
+			    sh 'docker -H ssh://root@43.204.214.44 run -d -p 8090:8080 aditya/sampleimage'
+		    }
+	    }
 		    
           }
 }
