@@ -18,7 +18,13 @@ pipeline {
 			    sh 'mvn package'
 		    }
 	    }
-	   */ stage ('Docker build'){
+	  */  stage ('remove existing containers'){
+	    	steps{
+			sh 'docker container prune'
+		}
+	  }
+	    
+	    stage ('Docker build'){
 		    steps {
 			   sh 'docker build -t sampleimage:latest .' 
 			    sh 'docker tag sampleimage aditya/sampleimage:latest'
