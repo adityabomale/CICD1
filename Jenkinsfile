@@ -10,7 +10,7 @@ pipeline {
 	stage ('deploy') {steps {echo 'inside deploy stage'}}
 	    stage ('checkout') {
 		    steps {
-			    git branch: 'master', url: 'https://github.com/adityabomale/new-repo.git'
+			    git branch: 'master', url: 'https://github.com/adityabomale/CICD1.git'
 		    }
 	    }
 	/*    stage ('maven build'){
